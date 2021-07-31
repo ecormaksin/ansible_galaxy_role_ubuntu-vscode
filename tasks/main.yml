@@ -1,2 +1,7 @@
 ---
 # tasks file for ansible_galaxy_role_ubuntu-vscode
+
+- name: "Visual Studio Code | install"
+  become: yes
+  ignore_errors: "{{ ansible_check_mode }}"
+  shell: snap install --classic code
